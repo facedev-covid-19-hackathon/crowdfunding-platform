@@ -1,0 +1,65 @@
+type Campaign {
+  id: ID
+  user: User
+  withdrawals: [Withdrawal]
+  likes: [Like]
+  donations: [Donation]
+  updates: [Update]
+  category: Category
+  rewards: [Reward]
+}
+
+type Category {
+  id: ID
+  Campaigns: [Campaign]
+}
+
+type Donation {
+  id: ID
+  Campaign: Campaign
+  Reward: Reward
+}
+
+type Like {
+  id: ID
+  user: User
+  images: [Campaign]
+}
+
+type Mutation {
+  login(email: String!, password: String!): String
+  signup(email: String!, password: String!, name: String!): User
+}
+
+type Query {
+  allCampaigns: [Campaign]
+  allCategories: [Category]
+  allDonations: [Donation]
+  allUsers: [User!]
+}
+
+type Reward {
+  id: ID
+  campaign: Campaign
+  donations: [Donation]
+}
+
+type Update {
+  id: ID
+  campaign: Campaign
+}
+
+type User {
+  id: ID
+  name: String
+  email: String
+  avatar: String
+  Status: String
+  Role: String
+}
+
+type Withdrawal {
+  id: ID
+  Campaign: Campaign
+}
+

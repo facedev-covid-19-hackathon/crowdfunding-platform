@@ -1,0 +1,14 @@
+type Campaign {
+  id: ID
+  user: User
+  withdrawals: [Withdrawal]
+  likes: [Like]
+  donations: [Donation]
+  updates: [Update]
+  category: Category
+  rewards: [Reward]
+}
+
+type Query {
+  allCampaigns: [Campaign]
+}

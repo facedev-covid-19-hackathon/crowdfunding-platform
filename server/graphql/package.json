@@ -1,0 +1,28 @@
+{
+  "name": "graphql-server",
+  "version": "1.0.0",
+  "description": "GraphQL API",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node-dev --respawn --transpileOnly ./src/index.ts",
+    "build": "tsc --build tsconfig.json",
+    "generate:graphql": "get-graphql-schema http://localhost:4000 > fullschema.graphql && graphqlgen",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "FaceDev Community",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-server": "^2.11.0",
+    "graphql-middleware": "^4.0.2",
+    "graphql-tools": "^4.0.7",
+    "merge-graphql-schemas": "^1.7.6"
+  },
+  "devDependencies": {
+    "@types/node": "^13.9.8",
+    "dotenv-cli": "^3.1.0",
+    "get-graphql-schema": "^2.1.2",
+    "graphqlgen": "^0.6.0-rc9",
+    "ts-node-dev": "^1.0.0-pre.44",
+    "typescript": "^3.8.3"
+  }
+}

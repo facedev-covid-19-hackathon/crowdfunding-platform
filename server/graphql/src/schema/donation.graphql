@@ -1,0 +1,9 @@
+type Donation {
+  id: ID
+  Campaign: Campaign
+  Reward: Reward
+}
+
+type Query {
+  allDonations: [Donation]
+}

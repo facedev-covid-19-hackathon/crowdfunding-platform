@@ -1,0 +1,4 @@
+type Update {
+  id: ID
+  campaign: Campaign
+}
