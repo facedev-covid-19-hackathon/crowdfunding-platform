@@ -1,0 +1,5 @@
+type Reward {
+  id: ID
+  campaign: Campaign
+  donations: [Donation]
+}

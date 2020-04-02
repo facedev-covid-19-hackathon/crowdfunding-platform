@@ -1,0 +1,4 @@
+type Withdrawal {
+  id: ID
+  Campaign: Campaign
+}

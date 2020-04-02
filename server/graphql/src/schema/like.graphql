@@ -1,0 +1,5 @@
+type Like {
+  id: ID
+  user: User
+  images: [Campaign]
+}
